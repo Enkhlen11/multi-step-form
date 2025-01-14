@@ -1,5 +1,12 @@
-import Image from "next/image";
+"use client";
+import Input from "../components/Input";
+
+import FirstSlide from "@/components/Firstslide";
 
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <div className="">
+      <FirstSlide />
+    </div>
+  );
 }
