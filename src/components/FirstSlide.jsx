@@ -1,7 +1,11 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Input from "./Input";
-export default function FirstSlide({ setCurrentSlides, handleChange }) {
+export default function FirstSlide({
+  setCurrentSlides,
+  handleChange,
+  currentSlide,
+}) {
   const error = "";
   return (
     <div className="w-[480px] h-[655px] p-8 rounded-lg border-1  bg-[#FFFFFF]  flex flex-col justify-between m-auto gap-[8px]">
@@ -35,7 +39,7 @@ export default function FirstSlide({ setCurrentSlides, handleChange }) {
         </div>
       </div>
       <div>
-        <Button buttonText=" Continue 1/3" setCurrentSlide={setCurrentSlides} />
+        <Button buttonText={currentSlide} setCurrentSlide={setCurrentSlides} />
       </div>
     </div>
   );
