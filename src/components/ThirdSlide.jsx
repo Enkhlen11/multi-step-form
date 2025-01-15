@@ -27,13 +27,13 @@ export default function ThirdSlide({
             helperText="First name cannot contain special characters or numbers."
           />
           <div className="flex w-[100%] mt-[20px]">
-            <label htmlFor="addImage">
+            <label className="w-[100%]" htmlFor="addImage">
               <p>
                 Profile image <span className="text-[#E14942]">*</span>
               </p>
               <div className="w-[100%] h-[180px] p-[16px] bg-[#7F7F80]/5 flex flex-col items-center justify-center ">
                 {imageUrl ? (
-                  <img src={imageUrl} alt="" />
+                  <img className="w-[100%] h-[180px]  " src={imageUrl} alt="" />
                 ) : (
                   <div className="w-[100%] flex flex-col items-center justify-center ">
                     <img src="./image.svg" alt="" />

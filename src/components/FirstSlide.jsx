@@ -2,11 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Input from "./Input";
-export default function FirstSlide({
-  setCurrentSlides,
-
-  currentSlide,
-}) {
+export default function FirstSlide({ setCurrentSlides, currentSlide }) {
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",
