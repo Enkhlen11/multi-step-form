@@ -1,58 +1,41 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Input from "./Input";
-export default function FirstSlide(
-  setCurrentSlide,
-  currentSlide,
-  formSteps,
-  helperText
-) {
-  const printFirstName = () => {
-    console.log("first name");
-  };
-  const printLastName = () => {
-    console.log("last name");
-  };
-  const printUserName = () => {
-    console.log("username");
-  };
+export default function FirstSlide({ setCurrentSlides, handleChange }) {
   const error = "";
   return (
-    <div className="w-[416px] h-[591px] p-8 rounded-lg border-1 bg-gray-500 flex flex-col justify-between m-auto gap-[8px]">
+    <div className="w-[480px] h-[655px] p-8 rounded-lg border-1  bg-[#FFFFFF]  flex flex-col justify-between m-auto gap-[8px]">
       <div>
         <Header />
         <div className="gap-[12px] mt-[28px]">
           <Input
+            name="firstName"
             label="First name"
             placeholder="Your first name"
-            handleChange="{printFirstName}"
+            handleChange={handleChange}
             error={""}
             helperText="First name cannot contain special characters or numbers."
           />
           <Input
+            name="lastName"
             label="Last name"
             placeholder="Your last name"
-            handleChange={printLastName}
+            handleChange={handleChange}
             error={""}
             helperTextText="Last name cannot contain special characters or numbers."
           />
           <Input
+            name="userName"
             label="Username"
             placeholder="Your username"
-            handleChange={printUserName}
+            handleChange={handleChange}
             error={""}
             helperText="This username is already taken. Please choose another one."
           />
         </div>
       </div>
       <div>
-        <Button
-          buttonText=" Continue 1/3"
-          ChevronRight
-          setCurrentSlide={setCurrentSlide}
-          currentSlide={currentSlide}
-          formSteps={formSteps}
-        />
+        <Button buttonText=" Continue 1/3" setCurrentSlide={setCurrentSlides} />
       </div>
     </div>
   );

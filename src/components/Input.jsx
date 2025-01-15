@@ -1,24 +1,17 @@
 import FirstSlide from "./Firstslide";
 
-export default function Input({
-  label,
-  handleChange,
-  placeholder,
-  error,
-  helperText,
-}) {
+export default function Input({ label, handleChange, placeholder, name }) {
   return (
-    <div className="">
-      <p>{label}</p>
+    <div>
+      <p>
+        {label} <span className="text-[#E14942]">*</span>
+      </p>
       <input
-        className={`w-[100%] h-[20px] p-[12px] rounded-lg  gap-[8px] focus:outline-none ${
-          error ? "focus:border-[#E14942]" : "focus:border-[#0CA5E9]"
-        } border-[1px]`}
+        name={name}
+        className="w-[100%] h-[44px] p-[12px] border-2 rounded-lg"
         onChange={handleChange}
         placeholder={placeholder}
-        error={""}
       />
-      <p>{helperText}</p>
     </div>
   );
 }
