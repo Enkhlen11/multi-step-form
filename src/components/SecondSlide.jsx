@@ -18,24 +18,28 @@ export default function SecondSlide({
             placeholder="Your email"
             error={""}
             helperText="First name cannot contain special characters or numbers."
+            type="email"
           />
           <Input
             label="Phone number"
             placeholder="Your phone number"
             error={""}
             helperTextText="Last name cannot contain special characters or numbers."
+            type="number"
           />
           <Input
             label="Password"
             placeholder="Your password"
             error={""}
             helperText="This username is already taken. Please choose another one."
+            type="password"
           />
           <Input
             label="Confirm password"
             placeholder="Your confirm password"
             error={""}
             helperText="This username is already taken. Please choose another one."
+            type="password"
           />
         </div>
       </div>

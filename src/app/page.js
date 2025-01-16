@@ -7,7 +7,7 @@ import Success from "@/components/Success";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [formVlue, setFormVlue] = useState[{ name: "" }];
+
   const FormSteps = [FirstSlide, SecondSlide, ThirdSlide, Success][
     currentSlide
   ];
@@ -19,18 +19,12 @@ export default function Home() {
     setCurrentSlide(currentSlide - 1);
   };
 
-  const handleChange = (event) => {
-    // console.log(event.target.value);
-    console.log(event.target.name);
-    setFormVlue;
-  };
   return (
-    <div className="pt-[182px] bg-[#c2c3c8]">
+    <div className="pt-[182px] bg-[#e0e1e2]">
       <FormSteps
         setCurrentSlides={setCurrentSlides}
-        handleChange={handleChange}
-        backCurrentSlides={backCurrentSlides}
         currentSlide={currentSlide}
+        backCurrentSlides={backCurrentSlides}
       />
     </div>
   );
