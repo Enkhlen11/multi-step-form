@@ -1,5 +1,3 @@
-import FirstSlide from "./Firstslide";
-
 export default function Input({
   label,
   handleChange,
