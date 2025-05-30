@@ -33,8 +33,7 @@ export default function SecondSlide({
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setFormErrors((prev) => ({ ...prev, email: "Зөв мэйл хаяг оруулна уу" }));
     }
-  };
-  if (!phoneNumber.trim()) {
+    if (!phoneNumber.trim()) {
     setFormErrors((prev) => ({ ...prev, phoneNumber: "Тоо оруулна уу" }));
   } else if (!/^\+?\d{8}$/.test(phoneNumber)) {
     setFormErrors((prev) => ({
@@ -42,7 +41,19 @@ export default function SecondSlide({
       phoneNumber: "8 оронтой тоо оруулна уу",
     }));
   }
-  if (!password)
+  if (!password.trim()){ errors.password = "Нууц үгээ оруулна уу";
+  } else if (password.length < 6) {
+    errors.password = "Нууц үг хамгийн багадаа 6 тэмдэгт байх ёстой";}
+
+  if (confirmPassword !== password) {
+    errors.confirmPassword = "Нууц үг таарахгүй байна";
+  }
+   if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+  };
+   
     return (
       <div className="w-[480px] h-[655px] p-8 rounded-lg border-1 bg-[#FFFFFF] flex flex-col justify-between m-auto gap-[8px]">
         <div>
@@ -51,7 +62,7 @@ export default function SecondSlide({
             <Input
               label="Email"
               placeholder="Your email"
-              error={""}
+              error={formValues.email}
               helperText="First name cannot contain special characters or numbers."
               type="email"
               name="email"
