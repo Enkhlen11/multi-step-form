@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className="pt-[182px] bg-[#e0e1e2]">
+    <div className="min-h-screen pt-[182px] bg-[#e0e1e2]">
       <FormSteps
         setCurrentSlides={setCurrentSlides}
         currentSlide={currentSlide}
