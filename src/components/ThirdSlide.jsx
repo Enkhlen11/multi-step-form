@@ -67,7 +67,7 @@ export default function ThirdSlide({
     return isValid;
   };
 
-  const handleNext = () => {
+  const handleClick = () => {
     if (validateForm()) {
       localStorage.setItem("dateOfBirth", formValues.dateOfBirth);
       localStorage.setItem("profileImage", formValues.profileImage);
@@ -148,7 +148,7 @@ export default function ThirdSlide({
         <Button
           buttonText={currentSlide}
           ChevronRight
-          handleClick={handleNext}
+          setCurrentSlide={handleClick}
         />
       </div>
     </div>
