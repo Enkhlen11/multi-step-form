@@ -90,11 +90,11 @@ export default function ThirdSlide({
             handleChange={handleChange}
             error={formErrors.dateOfBirth}
           />
-          {formErrors.dateOfBirth && (
+          {/* {formErrors.dateOfBirth && (
             <p className="text-red-500 text-sm mt-1">
               {formErrors.dateOfBirth}
             </p>
-          )}
+          )} */}
         </div>
 
         <div className="mt-[20px] w-full relative">
