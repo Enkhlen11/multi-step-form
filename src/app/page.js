@@ -1,6 +1,6 @@
 "use client";
-import { useActionState, useState } from "react";
-import FirstSlide from "@/components/Firstslide";
+import { useState } from "react";
+import FirstSlide from "@/components/FirstSlide";
 import SecondSlide from "@/components/SecondSlide";
 import ThirdSlide from "@/components/ThirdSlide";
 import Success from "@/components/Success";
